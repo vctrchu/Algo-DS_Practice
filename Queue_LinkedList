@@ -1,0 +1,33 @@
+public class QueueUsingLinkedList {
+	
+	private class Node {
+		int data;
+		Node next;
+	}
+
+	Node first;
+	Node last;
+
+	QueueUsingLinkedList() {
+		first = null;
+		last = null;
+	}
+
+	private void enqueue(int x) {
+		Node newNode = new Node();
+		newNode.data = x;
+		last.next = newNode;
+		last = newNode;
+		if (first == null) {
+			first = last;
+		}
+	}
+
+	private int dequeue() {
+		if (front == null) return;
+		else {
+			int temp = first.data;
+			first = first.next;
+		}
+	}
+}
